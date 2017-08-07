@@ -2,18 +2,9 @@
 
       <div class="row">
 
-          <div class="col-md-3">
-              <p class="lead">Rainforest</p>
-              <div class="list-group">
-                  <a href="#" class="list-group-item active">Category 1</a>
-                  <a href="#" class="list-group-item">Category 2</a>
-                  <a href="#" class="list-group-item">Category 3</a>
-              </div>
-          </div>
-
           <div class="col-md-9">
 
-              <div class="thumbnail">
+              <div class="thumbnail1">
                   <%= image_tag @product.image_url %>
                   <div class="caption-full">
                       <h4 class="pull-right"><%= @product.price_in_dollars %></h4>
@@ -22,7 +13,7 @@
                       <p><%= @product.description %></p>
                   </div>
                   <div class="ratings">
-                      <p class="pull-right">3 reviews</p>
+                      <p class="pull-right"><%= @product.reviews.count %> reviews</p>
                       <p>
                           <span class="glyphicon glyphicon-star"></span>
                           <span class="glyphicon glyphicon-star"></span>
@@ -32,12 +23,14 @@
                           4.0 stars
                       </p>
                   </div>
-                  <div class="editdeletebar">
-                    <%= link_to 'Edit', edit_product_path %> |
-                    <%= link_to 'Delete', product_path(@product), method: :delete, data: {confirm: "Are you sure you want to delete the product '#{@product.name}'? This cannot be undone!"} %>
-                  </div>
               </div>
-
+              <div class="editdeletebar">
+                <%= link_to 'Edit', edit_product_path %> |
+                <%= link_to 'Delete', product_path(@product), method: :delete, data: {confirm: "Are you sure you want to delete the product '#{@product.name}'? This cannot be undone!"} %>
+              </div>
+              <br>
+              <br>
+              <hr>
               <div class="well">
 
                   <div class="text-right">
