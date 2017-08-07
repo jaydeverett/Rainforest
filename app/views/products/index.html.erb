@@ -22,10 +22,9 @@
                           <% @products.each do |product| %>
                    <div class="col-sm-4 col-lg-4 col-md-4">
                        <div class="thumbnail">
-
-                           <img src="http://placehold.it/320x150" alt="">
+                          <%= image_tag product.image_url, :size => "160x320" unless product.image_url.blank? %>
                            <div class="caption">
-                               <h4 class="pull-right"><%= product.price_in_cents %></h4>
+                               <h4 class="pull-right"><%= product.price_in_dollars %></h4>
 
                                <h4><%= link_to "/products/#{product.id}" do %>
                                <%= product.name %></a></h4>

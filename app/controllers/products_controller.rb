@@ -18,6 +18,7 @@ class ProductsController < ApplicationController
     @product.name = params[:product][:name]
     @product.description = params[:product][:description]
     @product.price_in_cents = params[:product][:price_in_cents]
+    @product.image_url = params[:product][:image_url]
 
     if @product.save
       flash[:notice] = "Product successfully created"
@@ -44,10 +45,13 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-
+    @product = Product.find(params[:id])
+    @product.destroy
+    flash[:notice] = "Product successfully deleted"
+    redirect_to products_path
   end
 
   def product_params
-    params.require(:product).permit(:name, :description, :price_in_cents)
+    params.require(:product).permit(:name, :description, :price_in_cents, :image_url)
   end
 end

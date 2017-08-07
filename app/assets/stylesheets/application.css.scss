@@ -16,6 +16,10 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+nav {
+  display: block;
+}
+
 .navbar-brand {
    font-family: 'VT323', monospace;
  }
@@ -23,3 +27,13 @@
 .lead {
   font-family: 'Bungee Shade', cursive;
 }
+
+// div.thumbnail {
+//   height: 370px;
+//   width: 200px;
+// }
+//
+// body > div:nth-child(3) > div > div.col-md-9 > div > div >  {
+//   max-width: 500px;
+//   max-height: 500px;
+// }

@@ -3,3 +3,4 @@
 
 <h1>Editing <%= link_to @product.name, product_path(@product) %> </h1>
 <%= render 'product_form', single_product: @product %>
+<%= link_to 'Back to Item', product_path %>
