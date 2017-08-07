@@ -1,9 +1,64 @@
 <h2>All Products</h2>
 
+<div class="container">
 
-<% @products.each do |product| %>
-<p>
-<%= product.name %> | <%= product.description %> | <%= product.price_in_cents %>
-<%= link_to "See More", ("/products/#{product.id}") %>
-</p>
-<% end %>
+       <div class="row">
+
+           <div class="col-md-3">
+               <p class="lead">Rainforest</p>
+               <div class="list-group">
+                   <a href="#" class="list-group-item">Browse All Items</a>
+                   <a href="#" class="list-group-item">Add an Item</a>
+                   <a href="#" class="list-group-item">Category 3</a>
+               </div>
+           </div>
+
+           <div class="col-md-9">
+
+               <div class="row carousel-holder">
+
+               <div class="row">
+
+                          <% @products.each do |product| %>
+                   <div class="col-sm-4 col-lg-4 col-md-4">
+                       <div class="thumbnail">
+
+                           <img src="http://placehold.it/320x150" alt="">
+                           <div class="caption">
+                               <h4 class="pull-right"><%= product.price_in_cents %></h4>
+
+                               <h4><%= link_to "/products/#{product.id}" do %>
+                               <%= product.name %></a></h4>
+                               <% end %>
+                               <p><%= product.description%>.</p>
+                           </div>
+                           <div class="ratings">
+                               <p class="pull-right">15 reviews</p>
+                               <p>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                               </p>
+                           </div>
+                       </div>
+                   </div>
+       <% end %>
+
+
+                       </div>
+                   </div>
+
+               </div>
+
+           </div>
+
+       </div>
+
+   </div>
+   <!-- /.container -->
+
+   <div class="container">
+
+       <hr>
