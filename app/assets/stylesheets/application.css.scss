@@ -26,19 +26,24 @@ body {
  }
 
 h2 {
-  font-family: 'VT323', monospace;  
+  font-family: 'VT323', monospace;
 }
 
 .lead {
   font-family: 'VT323', monospace;
 }
 
-// div.thumbnail {
-//   height: 370px;
-//   width: 200px;
-// }
+.reviewername {
+  font-family: 'VT323', monospace;
+}
+
+
+div.thumbnail {
+  height: 380px;
+  width: 240px;
+}
 //
-// body > div:nth-child(3) > div > div.col-md-9 > div > div >  {
-//   max-width: 500px;
-//   max-height: 500px;
-// }
+body > div:nth-child(3) > div > div.col-md-9 > div > div >  {
+  max-width: 500px;
+  max-height: 500px;
+}
