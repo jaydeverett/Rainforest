@@ -60,6 +60,13 @@
        <!-- /.container -->
      </nav>
 
+      <% if flash[:notice] %>
+        <p class="notice"><%= flash[:notice] %></p>
+      <% end %>
+      <% if flash[:alert] %>
+        <p class="alert"><%= flash[:alert] %></p>
+      <% end %>
+
     <%= yield %>
 
 

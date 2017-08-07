@@ -16,16 +16,17 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-nav {
-  display: block;
+
+body {
+    padding-top: 65px;
 }
 
 .navbar-brand {
-   font-family: 'VT323', monospace;
+  font-family: 'Bungee Shade', cursive;
  }
 
 .lead {
-  font-family: 'Bungee Shade', cursive;
+  font-family: 'VT323', monospace;
 }
 
 // div.thumbnail {

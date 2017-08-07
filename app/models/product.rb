@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
 
-  validates :name, :description, :price_in_cents, presence: true
+  validates :name, :description, :price_in_cents, :image_url, presence: true
   validates :price_in_cents, numericality: {only_integer: true}
 
 def price_in_dollars
